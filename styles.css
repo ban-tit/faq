@@ -7,6 +7,8 @@
 }
 
 body {
+  min-height: 100vh;
+  height: auto;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
@@ -41,7 +43,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -20%); /* Center the container */
+  transform: translate(-50%, -50%); /* Center the container */
 }
 
 .imgH1 {
@@ -76,12 +78,21 @@ h1 {
   color: var(--text-color-light);
   margin-bottom: 10px;
   font-size: 0.97rem;
+  display: none; /* Hide answers by default */
+  margin-top: 10px;
 }
 
-.answerTwo,
-.answerThree,
-.answerFour {
-  display: none;
+.questionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.questionContainer img {
+  width: 20px;
+  height: 20px;
 }
 
 hr {
@@ -90,76 +101,49 @@ hr {
 
 @media (max-width: 900px) {
   .container {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .q4 {
     margin-bottom: 0;
-  }
-
-  .attribution {
-    bottom: -315px;
   }
 }
 
 @media (max-width: 800px) {
-  .container {
-    margin-top: 20px;
+  body {
+    min-height: 100vh;
+    height: auto;
   }
-
   .q4 {
     margin-bottom: 0;
-  }
-
-  .attribution {
-    bottom: -315px;
   }
 }
 
 @media (max-width: 700px) {
-  .backgroundImage {
-    margin-bottom: 90px;
+  body {
+    height: auto;
   }
-  .container {
-    margin-top: 20px;
-  }
-
   .q4 {
     margin-bottom: 0;
-  }
-
-  .attribution {
-    bottom: -305px;
-    padding-bottom: 10px;
   }
 }
 
 @media (max-width: 551px) {
-  .backgroundImage {
-    margin-bottom: 110px;
-  }
   .container {
-    margin-top: 20px;
     width: 90%;
   }
 
   .q4 {
     margin-bottom: 0;
-  }
-
-  .attribution {
-    bottom: -305px;
-    padding: 10px;
   }
 }
 
 @media (max-width: 501px) {
   .backgroundImage {
-    margin-bottom: 420px;
+    margin-bottom: 0px;
   }
   .container {
     width: 90%;
-    top: 100px;
   }
 
   .q4 {
@@ -172,14 +156,11 @@ hr {
 }
 
 @media (max-width: 451px) {
-  .backgroundImage {
-    margin-bottom: 430px;
+  body {
+    height: auto;
   }
-}
-
-@media (max-width: 401px) {
   .backgroundImage {
-    margin-bottom: 460px;
+    margin-bottom: 0px;
   }
 }
 
@@ -191,19 +172,19 @@ hr {
     height: 800px;
   }
 
+  .container {
+    width: 90%;
+    margin-top: -10px;
+  }
+
   .backgroundImage {
     display: none;
   }
 
   .backgroundImage2 {
     display: block;
-  }
-
-  .container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
+    width: 100%;
+    margin-bottom: 200px;
   }
 
   .icon-star {
@@ -218,7 +199,6 @@ hr {
   .questionContainer {
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
   }
 
   .q1 {

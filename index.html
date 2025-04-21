@@ -19,9 +19,10 @@
       .attribution {
         font-size: 11px;
         position: absolute;
-        bottom: -290px;
+        bottom: 0px;
         text-align: center;
         width: 100%;
+        padding-bottom: 10px;
       }
       .attribution a {
         color: hsl(220, 5%, 11%);
@@ -56,7 +57,11 @@
         <div class="question q1">
           What is Frontend Mentor, and how will it help me?
         </div>
-        <img class="minus" src="assets/images/icon-minus.svg" />
+        <img
+          class="minus toggleIcon"
+          src="assets/images/icon-plus.svg"
+          alt="Toggle Answer"
+        />
       </div>
 
       <div class="answer">
@@ -70,10 +75,14 @@
 
       <div class="questionContainer">
         <div class="question">Is Frontend Mentor free?</div>
-        <img class="minus" src="assets/images/icon-plus.svg" />
+        <img
+          class="minus toggleIcon"
+          src="assets/images/icon-plus.svg"
+          alt="Toggle Answer"
+        />
       </div>
 
-      <div class="answerTwo">
+      <div class="answer">
         Yes, Frontend Mentor offers both free and premium coding challenges,
         with the free option providing access to a range of projects suitable
         for all skill levels.
@@ -85,10 +94,14 @@
         <div class="question">
           Can I use Frontend Mentor projects in my portfolio?
         </div>
-        <img class="minus" src="assets/images/icon-plus.svg" />
+        <img
+          class="minus toggleIcon"
+          src="assets/images/icon-plus.svg"
+          alt="Toggle Answer"
+        />
       </div>
 
-      <div class="answerThree">
+      <div class="answer">
         Yes, you can use projects completed on Frontend Mentor in your
         portfolio. It's an excellent way to showcase your skills to potential
         employers!
@@ -100,10 +113,14 @@
         <div class="question">
           How can I get help if I'm stuck on a challenge?
         </div>
-        <img class="minus" src="assets/images/icon-plus.svg" />
+        <img
+          class="minus toggleIcon"
+          src="assets/images/icon-plus.svg"
+          alt="Toggle Answer"
+        />
       </div>
 
-      <div class="answerFour">
+      <div class="answer">
         The best place to get help is inside Frontend Mentor's Discord
         community. There's a help channel where you can ask questions and seek
         support from other community members.
@@ -116,5 +133,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/ban-tit">ban tit</a>.
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
